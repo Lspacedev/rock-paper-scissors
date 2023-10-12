@@ -19,6 +19,16 @@ let results = document.querySelector('#results');
 let playerScore = document.querySelector('.playerScore');
 let computerScore = document.querySelector('.computerScore');
 
+let rock = document.querySelector('#rock');
+let paper = document.querySelector('#paper');
+let scissors = document.querySelector('#scissors');
+
+let rockComp = document.querySelector('#rock-two');
+let paperComp = document.querySelector('#paper-two');
+let scissorsComp = document.querySelector('#scissors-two');
+
+
+
 function round(playerSelection, computerSelection){
     let player = playerSelection;
     let computer = computerSelection;
@@ -26,11 +36,16 @@ function round(playerSelection, computerSelection){
     if(player === 'rock' && computer === 'rock'){
         results.textContent = "Tie!";
 
+       
+
     }else if(player === 'paper' && computer === 'paper'){
         results.textContent = "Tie!";
 
+
     }else if(player === 'scissors' && computer === 'scissors'){
         results.textContent = "Tie!";
+ 
+        
 
     }else if(player === 'rock' && computer === 'scissors'){
         i = i + 1;
@@ -70,6 +85,39 @@ function round(playerSelection, computerSelection){
     
 }
 
+function playerBorder(p){
+    if(p === 'rock'){
+        rock.style.border = "5px solid purple";
+        paper.style.border = "1px solid black";
+        scissors.style.border = "1px solid black";
+    }else if(p === 'paper'){
+        rock.style.border = "1px solid black";
+        paper.style.border = "5px solid purple";
+        scissors.style.border = "1px solid black";
+    }else if(p === 'scissors'){
+        rock.style.border = "1px solid black";
+        paper.style.border = "1px solid black";
+        scissors.style.border = "5px solid purple";
+    }
+}
+
+function computerBorder(q){
+    if(q === 'rock'){
+        rockComp.style.border = "5px solid blue";
+        paperComp.style.border = "1px solid black";
+        scissorsComp.style.border = "1px solid black";
+    }else if(q === 'paper'){
+        rockComp.style.border = "1px solid blue";
+        paperComp.style.border = "5px solid blue";
+        scissorsComp.style.border = "1px solid black";
+    }else if(q === 'scissors'){
+        rockComp.style.border = "1px solid black";
+        paperComp.style.border = "1px solid black";
+        scissorsComp.style.border = "5px solid blue";
+    }
+}
+
+
 
 const buttons = document.querySelectorAll('.buttons > button');
 
@@ -81,13 +129,15 @@ buttons.forEach((button) => {
         results.textContent = "You lost to the computer";
     }else{
         playerChoice = button.id;
-        
+        playerBorder(playerChoice);
         let compChoice = getComputerChoice().toLowerCase();
+        computerBorder(compChoice)
 
         round(playerChoice, compChoice);}
+
+        
+
     });
     
 });
-
-
 

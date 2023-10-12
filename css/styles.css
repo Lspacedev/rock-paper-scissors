@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background-color: #E6AF2E;
+    
+}
+
+h1 {
+    text-align: center;
+    font-size: 78px;
+    -webkit-text-stroke: 3px black;
+}
+
+#selection {
+    display: flex;
+    justify-content: center;
+    gap: 170px;
+    
+}
+
+.buttons button {
+    padding: 25px 30px;
+    font-size: 22px;
+    color: white;
+    background-color: #231123;
+    box-shadow: 2px 2px 0 2px #000000;
+}
+
+.buttons, .score {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    gap: 10px;
+}
+
+.score {
+    justify-content: space-around;
+    margin-bottom: 65px;
+
+}
+
+.score div{
+    font-size: 22px;
+    padding: 30px 70px;
+    margin: 25px;
+    background-color: #E0E2DB;
+    color: black;
+    box-shadow: 2px 2px 5px 2px #C99418;
+}
+
+.versus {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin-bottom: 5px;
+
+    font-size: 28px;
+}
+
+#scoreBoard {
+    margin: 0;
+    padding: 20px;
+    border: none;
+    align-self: center;
+    font-size: 35px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    background-color: #E6AF2E;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    box-shadow: 3px 3px 5px 3px #A47913;
+}
+
+#results {
+    color: black;
+}
+
+#box {
+    padding: 10px;
+    margin: 0 450px;
+    background-color: #E0E2DB;
+    height: 50px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 1px 1px 4px 1px #000;
+    
+}
